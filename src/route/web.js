@@ -4,6 +4,7 @@ import homeController from '../controller/homecontroller';
 let router = express.Router();
 const initwevRoute = (app) => {
     router.get('/',homeController.getHomepage );
+    router.get('/detail/user/:id' , homeController.getDetailPage)
       router.get('/about' , (req , res )=>{
         res.send('ahihi do ngoc')
       })
